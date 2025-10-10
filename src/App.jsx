@@ -40,7 +40,7 @@ function App() {
           <div className="container mx-auto px-4">
             <div className="glass-card text-center">
               <p className="text-sm opacity-60">
-                Made with ❤️ using React & Glassmorphism Design
+                &copy; 2025 Changelog Viewer. All rights reserved.
               </p>
             </div>
           </div>

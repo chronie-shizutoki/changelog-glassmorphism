@@ -38,7 +38,7 @@ const SearchFilter = ({ onSearch, onFilter, totalCount }) => {
     <div className="mb-6">
       <div className="glass-card">
         <div className="flex flex-col sm:flex-row gap-4 mobile-search">
-          {/* 搜索框 */}
+          {/* Search Box */}
           <div className="flex-1 relative">
             <div className="relative">
               <Search size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 opacity-60" />
@@ -60,7 +60,7 @@ const SearchFilter = ({ onSearch, onFilter, totalCount }) => {
             </div>
           </div>
 
-          {/* 过滤器 */}
+          {/* Filter Button */}
           <div className="relative">
             <button
               onClick={() => setIsFilterOpen(!isFilterOpen)}
@@ -92,7 +92,7 @@ const SearchFilter = ({ onSearch, onFilter, totalCount }) => {
           </div>
         </div>
 
-        {/* 结果统计 */}
+        {/* Results Statistics */}
         {totalCount !== undefined && (
           <div className="mt-4 pt-4 border-t border-white/10">
             <p className="text-sm opacity-75">

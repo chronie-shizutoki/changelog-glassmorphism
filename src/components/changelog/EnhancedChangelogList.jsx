@@ -12,7 +12,7 @@ const EnhancedChangelogList = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState('all');
 
-  // 过滤和搜索逻辑
+  // Filter and search logic
   const filteredChangelog = useMemo(() => {
     if (!changelog) return [];
 
@@ -21,7 +21,7 @@ const EnhancedChangelogList = () => {
       const title = entry.title[currentLang] || entry.title.en;
       const description = entry.description[currentLang] || entry.description.en;
       
-      // 搜索过滤
+      // Search filter
       const matchesSearch = searchTerm === '' || 
         title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -31,7 +31,7 @@ const EnhancedChangelogList = () => {
           return content.toLowerCase().includes(searchTerm.toLowerCase());
         });
 
-      // 类型过滤
+      // Type filter
       const matchesType = filterType === 'all' || 
         entry.changes.some(change => change.type === filterType);
 
@@ -93,17 +93,17 @@ const EnhancedChangelogList = () => {
 
   return (
     <div className="space-y-6">
-      {/* 统计信息 */}
+      {/* Changelog stats */}
       <ChangelogStats />
       
-      {/* 搜索和过滤 */}
+      {/* Search and filter */}
       <SearchFilter 
         onSearch={setSearchTerm}
         onFilter={setFilterType}
         totalCount={filteredChangelog.length}
       />
 
-      {/* 更新日志列表 */}
+      {/* Changelog list */}
       {filteredChangelog.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-16">
           <div className="glass-card text-center">

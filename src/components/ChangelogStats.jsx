@@ -10,7 +10,7 @@ const ChangelogStats = () => {
     return null;
   }
 
-  // 统计各种类型的更改
+  // Calculate various types of changes
   const stats = changelog.reduce((acc, entry) => {
     acc.totalVersions++;
     
@@ -74,7 +74,7 @@ const ChangelogStats = () => {
       value: stats.security,
       color: 'from-red-500 to-rose-500'
     }
-  ].filter(item => item.value > 0); // 只显示有数据的统计
+  ].filter(item => item.value > 0); // Only show stats with data
 
   return (
     <div className="mb-6">

@@ -30,7 +30,7 @@ const ChangelogList = () => {
             className="glass-button flex items-center gap-2 mx-auto"
           >
             <RefreshCw size={16} />
-            <span>重试</span>
+            <span>{t('retry')}</span>
           </button>
         </div>
       </div>

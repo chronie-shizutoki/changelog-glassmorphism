@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 自定义CSS变量 */
+/* Custom CSS variables */
 :root {
-  /* 浅色主题 */
+  /* Light theme */ 
   --glass-bg: rgba(255, 255, 255, 0.25);
   --glass-border: rgba(255, 255, 255, 0.18);
   --glass-shadow: rgba(31, 38, 135, 0.37);
@@ -16,7 +16,7 @@
 }
 
 [data-theme="dark"] {
-  /* 深色主题 */
+  /* Dark theme */  
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: rgba(0, 0, 0, 0.3);
@@ -27,7 +27,7 @@
   --accent-color: #4f46e5;
 }
 
-/* 基础样式 */
+/* Base styles */
 * {
   box-sizing: border-box;
 }
@@ -39,9 +39,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-primary);
@@ -51,7 +49,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* 背景装饰元素 */
+/* Background decoration elements */
 body::before {
   content: '';
   position: fixed;
@@ -74,7 +72,7 @@ body::before {
     radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
 }
 
-/* 液态玻璃效果基础类 */
+/* Liquid glass effect base class */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
@@ -127,7 +125,7 @@ body::before {
   background: rgba(255, 255, 255, 0.12);
 }
 
-/* 动画效果 */
+/* Animation effects */   
 .fade-in {
   animation: fadeIn 0.6s ease-out;
 }
@@ -140,7 +138,7 @@ body::before {
   animation: float 6s ease-in-out infinite;
 }
 
-/* 渐变文字效果 */
+/* Gradient text effect */
 .gradient-text {
   background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
   -webkit-background-clip: text;
@@ -148,7 +146,7 @@ body::before {
   background-clip: text;
 }
 
-/* 版本标签样式 */
+/* Version badge style */
 .version-badge {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
@@ -165,7 +163,7 @@ body::before {
   border: none;
 }
 
-/* 更改类型标签 */
+/* Change type badges */
 .change-type-feature {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
@@ -244,7 +242,7 @@ body::before {
   border: none;
 }
 
-/* 动画关键帧 */
+/* Animation keyframes */ 
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -276,7 +274,7 @@ body::before {
   }
 }
 
-/* 滚动条样式 */
+/* Scrollbar styles */  
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -295,7 +293,7 @@ body::before {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Markdown内容样式 */
+/* Markdown content styles */
 .markdown-content {
   font-size: 0.875rem;
   line-height: 1.625;
@@ -369,7 +367,7 @@ body::before {
   border-radius: 0;
 }
 
-/* 响应式设计 */
+/* Responsive design */ 
 @media (max-width: 768px) {
   .glass-card {
     padding: 1rem;
@@ -380,7 +378,7 @@ body::before {
     font-size: 0.75rem;
   }
 
-  /* 移动端头部优化 */
+  /* Mobile header optimizations */ 
   .mobile-header {
     padding: 0.75rem 1rem;
   }
@@ -393,7 +391,7 @@ body::before {
     font-size: 0.75rem;
   }
 
-  /* 移动端统计卡片优化 */
+  /* Mobile stats card optimizations */
   .mobile-stats {
     flex-direction: column;
     gap: 0.5rem;
@@ -404,22 +402,22 @@ body::before {
     min-width: auto;
   }
 
-  /* 移动端搜索框优化 */
+  /* Mobile search optimizations */
   .mobile-search {
     flex-direction: column;
     gap: 0.75rem;
   }
 
   .mobile-search input {
-    font-size: 1rem; /* 防止iOS缩放 */
+    font-size: 1rem; /* Prevents iOS zoom */
   }
 
-  /* 移动端语言选择器优化 */
+  /* Mobile language selector optimizations */
   .mobile-language-selector {
     min-width: 100px;
   }
 
-  /* 移动端版本卡片优化 */
+  /* Mobile version card optimizations */
   .mobile-version-card {
     margin: 0.5rem 0;
   }
@@ -437,7 +435,7 @@ body::before {
 }
 
 @media (max-width: 480px) {
-  /* 超小屏幕优化 */
+  /* Mobile optimizations for extra small screens */
   .glass-card {
     padding: 0.75rem;
     margin: 0.25rem;
@@ -451,7 +449,7 @@ body::before {
     font-size: 1.125rem;
   }
 
-  /* 统计卡片在超小屏幕上的布局 */
+  /* Mobile stats card layout for extra small screens */  
   .mobile-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
@@ -470,7 +468,7 @@ body::before {
   }
 }
 
-/* 高对比度模式支持 */
+/* High contrast mode support */
 @media (prefers-contrast: high) {
   :root {
     --glass-bg: rgba(255, 255, 255, 0.9);
@@ -487,7 +485,7 @@ body::before {
   }
 }
 
-/* 减少动画模式支持 */
+/* Reduced motion mode support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

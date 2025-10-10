@@ -12,12 +12,12 @@ function App() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    // 确保主题正确应用
+// Ensure the theme is applied correctly
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
   useEffect(() => {
-    // 设置HTML语言属性
+    // Set HTML language attribute
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
@@ -25,7 +25,7 @@ function App() {
     <div className="min-h-screen">
 
 
-      {/* 主要内容 */}
+      {/* Main content */}
       <div className="relative z-10">
         <Header />
         
@@ -35,7 +35,7 @@ function App() {
           </div>
         </main>
 
-        {/* 页脚 */}
+        {/* Footer */}
         <footer className="py-8 mt-16">
           <div className="container mx-auto px-4">
             <div className="glass-card text-center">
@@ -47,7 +47,7 @@ function App() {
         </footer>
       </div>
 
-      {/* 返回顶部按钮 */}
+      {/* Back to top button */}
       <BackToTop />
     </div>
   );

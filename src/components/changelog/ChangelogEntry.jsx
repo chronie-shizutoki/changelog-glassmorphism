@@ -32,7 +32,7 @@ const ChangelogEntry = ({ entry, index }) => {
 
   return (
     <div className="glass-card glass-hover fade-in mobile-version-card" style={{ animationDelay: `${index * 0.1}s` }}>
-      {/* 版本头部 */}
+      {/* Version header */}
       <div className="flex items-start justify-between mb-4 mobile-version-header">
         <div className="flex items-center gap-3">
           <div className={`version-badge ${getVersionTypeColor(entry.type)}`}>
@@ -50,7 +50,7 @@ const ChangelogEntry = ({ entry, index }) => {
         </div>
       </div>
 
-      {/* 标题和描述 */}
+      {/* Version title and description */}
       <div className="mb-4">
         <h3 className="text-xl font-semibold mb-2 gradient-text">
           {title}
@@ -60,7 +60,7 @@ const ChangelogEntry = ({ entry, index }) => {
         </p>
       </div>
 
-      {/* 展开/折叠按钮 */}
+      {/* Expand/collapse button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="glass-button w-full flex items-center justify-center gap-2 mb-4"
@@ -74,7 +74,7 @@ const ChangelogEntry = ({ entry, index }) => {
         />
       </button>
 
-      {/* 更改详情 */}
+      {/* Change details */}
       {isExpanded && (
         <div className="space-y-4 slide-up">
           {entry.changes.map((change, changeIndex) => (
@@ -89,7 +89,7 @@ const ChangelogEntry = ({ entry, index }) => {
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    // 自定义渲染组件以确保样式正确
+                    // Custom render components to ensure correct styles
                     h1: ({ children }) => <h1 className="text-lg font-semibold mb-2">{children}</h1>,
                     h2: ({ children }) => <h2 className="text-base font-semibold mb-2">{children}</h2>,
                     h3: ({ children }) => <h3 className="text-sm font-semibold mb-1">{children}</h3>,

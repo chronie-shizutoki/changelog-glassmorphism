@@ -11,7 +11,7 @@ const Header = () => {
       <div className="glass border-b border-white/10">
         <div className="container mx-auto px-4 py-4 mobile-header">
           <div className="flex items-center justify-between">
-            {/* Logo和标题 */}
+            {/* Logo and title */}
             <div className="flex items-center gap-3">
               <div className="glass-button w-12 h-12 rounded-full flex items-center justify-center float">
                 <BookOpen size={24} className="text-white" />
@@ -26,7 +26,7 @@ const Header = () => {
               </div>
             </div>
 
-            {/* 控制按钮 */}
+            {/* Control buttons */}
             <div className="flex items-center gap-3">
               <LanguageSelector />
               <ThemeToggle />

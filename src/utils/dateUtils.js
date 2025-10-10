@@ -1,8 +1,8 @@
 /**
- * 格式化日期为本地化字符串
- * @param {string} dateString - ISO日期字符串
- * @param {string} locale - 语言代码
- * @returns {string} 格式化的日期字符串
+ * Format date to a localized string
+ * @param {string} dateString - ISO date string
+ * @param {string} locale - Language code
+ * @returns {string} Formatted date string
  */
 export const formatDate = (dateString, locale = 'en') => {
   const date = new Date(dateString);
@@ -23,7 +23,7 @@ export const formatDate = (dateString, locale = 'en') => {
       day: 'numeric'
     });
   } catch (error) {
-    // 如果本地化失败，回退到英语
+    // If localization fails, fall back to English
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -33,10 +33,10 @@ export const formatDate = (dateString, locale = 'en') => {
 };
 
 /**
- * 获取相对时间字符串
- * @param {string} dateString - ISO日期字符串
- * @param {string} locale - 语言代码
- * @returns {string} 相对时间字符串
+ * Get relative time string
+ * @param {string} dateString - ISO date string
+ * @param {string} locale - Language code
+ * @returns {string} Relative time string
  */
 export const getRelativeTime = (dateString, locale = 'en') => {
   const date = new Date(dateString);
@@ -65,9 +65,9 @@ export const getRelativeTime = (dateString, locale = 'en') => {
 };
 
 /**
- * 检查日期是否为今天
- * @param {string} dateString - ISO日期字符串
- * @returns {boolean} 是否为今天
+ * Check if date is today
+ * @param {string} dateString - ISO date string
+ * @returns {boolean} Whether date is today
  */
 export const isToday = (dateString) => {
   const date = new Date(dateString);
@@ -77,10 +77,10 @@ export const isToday = (dateString) => {
 };
 
 /**
- * 检查日期是否在指定天数内
- * @param {string} dateString - ISO日期字符串
- * @param {number} days - 天数
- * @returns {boolean} 是否在指定天数内
+ * Check if date is within specified days
+ * @param {string} dateString - ISO date string
+ * @param {number} days - Number of days
+ * @returns {boolean} Whether date is within specified days
  */
 export const isWithinDays = (dateString, days) => {
   const date = new Date(dateString);
